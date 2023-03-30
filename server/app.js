@@ -15,7 +15,7 @@ const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1/DomoMaker';
 
 mongoose.connect(dbURI).catch((err) => {
   if (err) {
-    console.log('Could not connect to database');
+    // console.log('Could not connect to database');
     throw err;
   }
 });
@@ -36,5 +36,5 @@ router(app);
 
 app.listen(port, (err) => {
   if (err) { throw err; }
-  console.log(`Listening on port ${port}`);
+  // console.log(`Listening on port ${port}`);
 });
