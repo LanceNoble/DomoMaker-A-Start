@@ -51,7 +51,6 @@ const signup = async (req, res) => {
     req.session.account = Account.toAPI(newAccount);
     return res.json({ redirect: '/maker' });
   } catch (err) {
-    // console.log(err);
     if (err.code === 11000) {
       return res.status(400).json({ error: 'Username already in use!' });
     }
